@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo parnier</title>
+</head>
+
+<body>
+    <h1>All Animals You Know</h1>
+    <ul id="thelist">
+    </ul>
+
+    <script>
+        const correctQuestionsList = document.getElementById('thelist')
+        const UIcount = document.getElementById('count')
+
+        let list = [];
+        const thelist = [];
+        let answer;
+
+        while (true) {
+            answer = prompt('Ajouter un produit')
+            if (answer == 'exit') break;
+            list.push(answer)
+        }
+
+        list.forEach(function(animal) {
+            correctQuestionsList.innerHTML += `<li>${animal}</li>`
+        });
+    </script>
+</body>
+
+</html>
